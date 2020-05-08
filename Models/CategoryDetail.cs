@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 
 
+
 namespace ecommerce.Models
 {
     public class CategoryDetail
