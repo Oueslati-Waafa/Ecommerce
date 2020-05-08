@@ -10,13 +10,13 @@
         <EntityTypeShape EntityType="dbEspaceVenteModel.Tbl_Category" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="dbEspaceVenteModel.Tbl_MemberRole" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="dbEspaceVenteModel.Tbl_Members" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbEspaceVenteModel.Tbl_Product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="dbEspaceVenteModel.Tbl_Roles" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="dbEspaceVenteModel.Tbl_ShippingDetails" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
         <EntityTypeShape EntityType="dbEspaceVenteModel.Tbl_SlideImage" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
-        <AssociationConnector Association="dbEspaceVenteModel.FK__Tbl_Cart__Produc__24927208" ManuallyRouted="false" />
-        <AssociationConnector Association="dbEspaceVenteModel.FK__Tbl_Produ__Categ__25869641" ManuallyRouted="false" />
         <AssociationConnector Association="dbEspaceVenteModel.FK__Tbl_Shipp__Membe__267ABA7A" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="dbEspaceVenteModel.Tbl_Product" Width="1.5" PointX="3" PointY="1" />
+        <AssociationConnector Association="dbEspaceVenteModel.FK__Tbl_Cart__Produc__24927208" />
+        <AssociationConnector Association="dbEspaceVenteModel.FK__Tbl_Produ__Categ__25869641" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
