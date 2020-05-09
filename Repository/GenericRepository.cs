@@ -18,6 +18,8 @@ namespace ecommerce.Repository
         {
             _DBEntity = DBEntity;
             _dbSet = _DBEntity.Set<Tbl_Entity>();
+            _DBEntity.SaveChanges();
+
         }
         public IEnumerable<Tbl_Entity> GetProduct()
         {
