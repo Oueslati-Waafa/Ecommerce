@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ecommerce.Models.Home;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,21 +11,16 @@ namespace ecommerce.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            HomeIndexViewModel model = new HomeIndexViewModel();
+            return View(model.CreateModel());
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "C'est une espace de vente en ligne ";
 
             return View();
         }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
     }
 }

@@ -1,7 +1,8 @@
-﻿@{
+﻿@model ecommerce.Models.Home.HomeIndexViewModel
+
+@{
     ViewBag.Title = "Accueil";
 }
-
 <div id="themeSlider" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#themeSlider" data-slide-to="0" class="active"></li>
@@ -21,7 +22,7 @@
             <div class="imgOverlay"></div>
             <img style="height:320px;width:100%" src="../Images/3_03_21_2017_08_19_28.jpg" alt="Second slide">
             <div class="carousel-caption">
-                <h3>Mon Smartphone</h3>
+                <h3>Mon smartphone</h3>
 
             </div>
         </div>
@@ -29,7 +30,7 @@
             <div class="imgOverlay"></div>
             <img style="height:320px;width:100%" src="../Images/2_03_21_2017_08_15_59.jpg" alt="Third slide">
             <div class="carousel-caption">
-                <h3>Nouveautés</h3>
+                <h3>Nouveauté</h3>
 
             </div>
         </div>
@@ -42,9 +43,9 @@
     </a>
 
 </div>
-<div class="olContent f1"><h2 style="color:black">Recherche par nom/categorie</h2></div>
+<div class="olContent f1"><h2 style="color:black">Recherche par produit/catégorie</h2></div>
 <div class="olSearch fr">
-    <input type="text" placeholder="Enter Keyword" name="searchKey" class="inputComn houseText form-control" />
+    <input type="text" placeholder="Tapez ce que vous voulez chercher" name="searchKey" class="inputComn houseText form-control" />
     <div class="searchIcon">
         <button type="button" class="searchBtn">
             <img src="~/Images/searchIcon.png" />
@@ -57,26 +58,49 @@
 <div class="row">
     <div class="col-md-12">
         <div class="page-header">
-            <h2>Nos Produits <small>Tendence</small></h2>
+            <h2>Nos Poduit <small>Tendance</small></h2>
         </div>
     </div>
 </div>
 
 <div class="row product-container">
+    @foreach (var item in Model.ListOfProducts)
+    {
+        <div class="col-md-3 col-sm-3 col-xs-6" style="margin-bottom:8px">
+            <div class="thumbnail product-item" style="height:300px">
 
-    <div class="col-md-3 col-sm-3 col-xs-6" style="margin-bottom:8px">
-        <div class="thumbnail product-item" style="height:300px">
+                <img class="img-responsive" title="Voir plus"
+                     style="cursor:pointer;height:160px;width:100%"
+                     src="~/ProductImg/@item.ProductImage" />
 
-            <img class="img-responsive" title="Click to View Product detail"
-                 style="cursor:pointer;height:160px;width:100%"
-                 src="~/Images/81_12_24_2017_10_26_28.jpg" />
+                <div class="caption">
+                    <h5>@item.ProductName</h5>
+                    <p>@item.Price TND.</p>
+                    <p>
+                        @if (item.Quantity > 0)
+                        {
+                        <p>Disponible</p>
 
-            <div class="caption">
-                <h5>Smatphone</h5>
-                <p>60.00TND</p>
-                <p>Disponible</p>
-                <div class="product-item-badge">Nouveau</div>
+                    }
+                    else
+                    {
+                        <p>Undisponible</p>
+                    }
+                        </p>
+                        <div class="product-item-badge">
+                            @if (item.IsFeatured == true)
+                            {
+                                <p>Nouveau</p>
+
+                            }
+                            else
+                            {
+                        <p>Ancien</p>
+                            }
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+        }
+
 </div>
