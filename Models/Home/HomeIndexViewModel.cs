@@ -1,6 +1,7 @@
 ﻿
 using ecommerce.DAL;
 using ecommerce.Repository;
+using PagedList;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -11,18 +12,15 @@ namespace ecommerce.Models.Home
 {
     public class HomeIndexViewModel
     {
-        dbEspaceVenteEntities context = new dbEspaceVenteEntities();
-
         public GenericUnitOfWork _unitOfWork = new GenericUnitOfWork();
-        public IEnumerable<Tbl_Product> ListOfProducts { get; set; }
-        public HomeIndexViewModel CreateModel(string search)
+        dbEspaceVenteEntities context = new dbEspaceVenteEntities();
+        public IPagedList<Tbl_Product> ListOfProducts { get; set; }
+        public HomeIndexViewModel CreateModel(string search, int pageSize, int? page)
         {
-
-            SqlParameter[] pram = new SqlParameter[] {
-
-                   new SqlParameter("@search",search??(object)DBNull.Value)
-                   };
-            IEnumerable<Tbl_Product> data = context.Database.SqlQuery<Tbl_Product>("GetBySearch @search", pram).ToList();
+            SqlParameter[] param = new SqlParameter[]{
+                new SqlParameter("@search",search??(object)DBNull.Value)
+            };
+            IPagedList<Tbl_Product> data = context.Database.SqlQuery<Tbl_Product>("GetBySearch @search", param).ToList().ToPagedList(page ?? 1, pageSize);
             return new HomeIndexViewModel
             {
                 ListOfProducts = data

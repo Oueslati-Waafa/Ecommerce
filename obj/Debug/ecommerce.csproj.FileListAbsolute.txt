@@ -106,3 +106,7 @@ C:\Users\wafa oueslati\source\repos\ecommerce\ecommerce\obj\Debug\ecommerce.cspr
 C:\Users\wafa oueslati\source\repos\ecommerce\ecommerce\obj\Debug\ecommerce.csproj.CopyComplete
 C:\Users\wafa oueslati\source\repos\ecommerce\ecommerce\obj\Debug\ecommerce.dll
 C:\Users\wafa oueslati\source\repos\ecommerce\ecommerce\obj\Debug\ecommerce.pdb
+C:\Users\wafa oueslati\source\repos\ecommerce\ecommerce\bin\PagedList.dll
+C:\Users\wafa oueslati\source\repos\ecommerce\ecommerce\bin\PagedList.Mvc.dll
+C:\Users\wafa oueslati\source\repos\ecommerce\ecommerce\bin\PagedList.xml
+C:\Users\wafa oueslati\source\repos\ecommerce\ecommerce\bin\PagedList.Mvc.xml
