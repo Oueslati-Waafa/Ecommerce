@@ -9,15 +9,15 @@ namespace ecommerce.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Index(string search)
         {
             HomeIndexViewModel model = new HomeIndexViewModel();
-            return View(model.CreateModel());
+            return View(model.CreateModel(search));
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = "C'est une espace de vente en ligne ";
+            ViewBag.Message = "Your application description page.";
 
             return View();
         }
