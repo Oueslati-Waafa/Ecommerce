@@ -15,7 +15,7 @@
             <div class="imgOverlay"></div>
             <img style="height:320px;width:100%" src="../Images/4_03_21_2017_08_23_17.jpg" alt="First slide">
             <div class="carousel-caption">
-                <h3>Nouveau</h3>
+                <h3>New</h3>
 
             </div>
         </div>
@@ -23,7 +23,7 @@
             <div class="imgOverlay"></div>
             <img style="height:320px;width:100%" src="../Images/3_03_21_2017_08_19_28.jpg" alt="Second slide">
             <div class="carousel-caption">
-                <h3>Mon smartphone</h3>
+                <h3>My Phone</h3>
 
             </div>
         </div>
@@ -31,7 +31,7 @@
             <div class="imgOverlay"></div>
             <img style="height:320px;width:100%" src="../Images/2_03_21_2017_08_15_59.jpg" alt="Third slide">
             <div class="carousel-caption">
-                <h3>Nouveauté</h3>
+                <h3>Latest</h3>
 
             </div>
         </div>
@@ -44,11 +44,10 @@
     </a>
 
 </div>
-
-<div class="olContent f1"><h2 style="color:black">Recherche par produit/catégorie</h2></div>
+<div class="olContent f1"><h2 style="color:black">Search Product/Category</h2></div>
 <form method="post">
     <div class="olSearch fr">
-        <input type="text" placeholder="Tapez ce que vous voulez chercher" name="search" class="inputComn houseText form-control" />
+        <input type="text" name="search" placeholder="Enter Keyword" class="inputComn form-control" />
         <div class="searchIcon">
             <button type="submit" class="searchBtn">
                 <img src="~/Images/searchIcon.png" />
@@ -61,7 +60,7 @@
 <div class="row">
     <div class="col-md-12">
         <div class="page-header">
-            <h2>Nos Poduit <small>Tendance</small></h2>
+            <h2>Our Producrs <small>trends products</small></h2>
         </div>
     </div>
 </div>
@@ -72,39 +71,43 @@
         <div class="col-md-3 col-sm-3 col-xs-6" style="margin-bottom:8px">
             <div class="thumbnail product-item" style="height:300px">
 
-                <img class="img-responsive" title="Voir plus"
+                <img class="img-responsive" title="Click to View Product detail"
                      style="cursor:pointer;height:160px;width:100%"
                      src="~/ProductImg/@item.ProductImage" />
 
                 <div class="caption">
                     <h5>@item.ProductName</h5>
-                    <p>@item.Price TND.</p>
+                    <p>@item.Price ৳.</p>
                     <p>
                         @if (item.Quantity > 0)
                         {
-                        <p>Disponible</p>
-
+                            using (Html.BeginForm("AddToCart", "Home", new { productId = item.ProductId }, FormMethod.Post))
+                            {
+                                <button type="submit" class="pull-right"><i class="fa fa-shopping-cart"></i></button>
+                            }
+                        <p>Available</p>
                     }
                     else
                     {
-                        <p>Undisponible</p>
+                        <p>Not Available</p>
                     }
-
+                        </p>
                         <div class="product-item-badge">
                             @if (item.IsFeatured == true)
                             {
-                                <p>Nouveau</p>
+                                <p>New</p>
 
                             }
                             else
                             {
-                                <p>Ancien</p>
+                                <p>Old</p>
                             }
                         </div>
                     </div>
                 </div>
             </div>
         }
+
 
 </div>
 <div class="container">
