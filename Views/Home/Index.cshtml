@@ -1,4 +1,5 @@
 ﻿@model ecommerce.Models.Home.HomeIndexViewModel
+@using PagedList.Mvc
 
 @{
     ViewBag.Title = "Accueil";
@@ -88,7 +89,7 @@
                     {
                         <p>Undisponible</p>
                     }
-                        </p>
+
                         <div class="product-item-badge">
                             @if (item.IsFeatured == true)
                             {
@@ -105,4 +106,7 @@
             </div>
         }
 
+</div>
+<div class="container">
+    @Html.PagedListPager(Model.ListOfProducts, page => Url.Action("Index", new { page, search = Request.QueryString["search"] }), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded, DisplayItemSliceAndTotal = true })
 </div>
