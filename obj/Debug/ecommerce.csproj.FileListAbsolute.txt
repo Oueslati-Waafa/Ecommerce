@@ -110,3 +110,5 @@ C:\Users\wafa oueslati\source\repos\ecommerce\ecommerce\bin\PagedList.dll
 C:\Users\wafa oueslati\source\repos\ecommerce\ecommerce\bin\PagedList.Mvc.dll
 C:\Users\wafa oueslati\source\repos\ecommerce\ecommerce\bin\PagedList.xml
 C:\Users\wafa oueslati\source\repos\ecommerce\ecommerce\bin\PagedList.Mvc.xml
+C:\Users\wafa oueslati\source\repos\ecommerce\ecommerce\bin\PayPal.dll
+C:\Users\wafa oueslati\source\repos\ecommerce\ecommerce\bin\PayPal.xml
