@@ -107,7 +107,7 @@ namespace ecommerce.Controllers
             {
                 pic = System.IO.Path.GetFileName(file.FileName);
                 string path = System.IO.Path.Combine(Server.MapPath("~/ProductImg/"), pic);
-                // file is uploaded
+                
                 file.SaveAs(path);
             }
             tbl.ProductImage = pic;

@@ -23,13 +23,7 @@
 
                         </tr>
                     </thead>
-                    <tfoot>
-                        <tr>
-                            <th>No.</th>
-                            <th>Produit</th>
-                            <th>Action</th>
-                        </tr>
-                    </tfoot>
+                    
                     <tbody>
                         @foreach (var item in Model)
                         {
@@ -38,7 +32,6 @@
                                 <td>@count</td>
                                 <td>@item.ProductName</td>
                                 <td>
-
                                     @Html.ActionLink("Modifier", "ProductEdit", new { productId = item.ProductId })
                                 </td>
 

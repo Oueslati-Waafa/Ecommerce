@@ -6,13 +6,13 @@
     <edmx:Diagrams>
       <Diagram DiagramId="caa2055d80644cda91dbe5adf515076c" Name="Diagram1">
         <EntityTypeShape EntityType="dbEspaceVenteModel.Tbl_Cart" Width="1.5" PointX="5.25" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbEspaceVenteModel.Tbl_CartStatus" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbEspaceVenteModel.Tbl_CartStatus" Width="1.5" PointX="5.375" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="dbEspaceVenteModel.Tbl_Category" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="dbEspaceVenteModel.Tbl_MemberRole" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbEspaceVenteModel.Tbl_Members" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbEspaceVenteModel.Tbl_Roles" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbEspaceVenteModel.Tbl_ShippingDetails" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbEspaceVenteModel.Tbl_SlideImage" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbEspaceVenteModel.Tbl_Members" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbEspaceVenteModel.Tbl_Roles" Width="1.5" PointX="7.875" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbEspaceVenteModel.Tbl_ShippingDetails" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbEspaceVenteModel.Tbl_SlideImage" Width="1.5" PointX="7.5" PointY="4.875" IsExpanded="true" />
         <AssociationConnector Association="dbEspaceVenteModel.FK__Tbl_Shipp__Membe__267ABA7A" ManuallyRouted="false" />
         <EntityTypeShape EntityType="dbEspaceVenteModel.Tbl_Product" Width="1.5" PointX="3" PointY="1" />
         <AssociationConnector Association="dbEspaceVenteModel.FK__Tbl_Cart__Produc__24927208" />
